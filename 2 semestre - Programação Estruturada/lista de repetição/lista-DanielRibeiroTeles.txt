@@ -1,0 +1,251 @@
+Daniel Ribeiro Teles UC22200356
+
+                         
+                                       	LISTA REPETICAO
+
+
+
+----------------------------------------EX 1:Prefeito----------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+#include "conio2.h"
+
+int main() {
+	int habitantes=0,medSalario=0,salario1=0,salario2=0,filho1=0,filho2=0,porcent,parar;
+
+	
+	do{
+		habitantes=habitantes+1;
+		
+		
+		
+		printf("Familia numero %d\n",habitantes);
+		
+		
+		printf("\nRenda:R$");
+		scanf("%d",&salario1);
+		if(salario1<=0){
+            break;
+        }	
+		
+		printf("Numero de filhos:");
+		scanf("%d",&filho1);
+		if(salario1<=0){
+            break;
+        }
+		
+		
+			system ("cls");
+			
+			printf("1- continuar\n0- encerrar :");
+			scanf("%d",&parar);
+			if(parar<=0){
+				break;
+			}
+			
+			system ("cls");
+			
+		if(salario1>medSalario){
+		medSalario=salario1;	
+		}
+		
+		if(salario1<=100 && salario1>0 ){
+		porcent=porcent+1;
+		}
+		
+		if(salario1>=0)	{			
+		salario2=salario1+salario2;
+		filho2=filho1+filho2;
+		}
+				
+	}while(salario1>=0);
+
+	
+			salario1=salario2/habitantes;
+			filho1=filho2/habitantes;
+	
+			porcent=porcent*100;
+			porcent=porcent/habitantes;
+	
+	
+		system("cls");
+	
+	
+	printf("\nHabitantes:%d\n",habitantes);
+	printf("\nMedia salarial:R$%d\n",salario1);
+	printf("\nMedia de filhos por residencia:%d\n",filho1);
+	printf("\nO maior salario:%d\n",medSalario);
+	printf("\nPercentual de pessoas com salario ate R$100 :%d%%",porcent);	
+
+
+
+return 0;
+}
+
+----------------------------------------EX 2:altura----------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+#include "conio2.h"
+
+int main() {
+	float altChico,altZe,crescChico,crescZe;
+	int anos;
+	
+	
+	
+			textcolor (2);
+	printf("Alturas e crescimentos(Em centimetros)\n\n");
+		
+		printf("Insira a altura da primeira pessoa: ");
+		scanf("%f",&altChico);
+		
+		printf("\nO seu crescimento anual e de: ");
+		scanf("%f",&crescChico);
+		
+			system ("cls");
+			textcolor (9);
+		
+		printf("Insira a altura da segunda pessoa: ");
+		scanf("%f",&altZe);
+		
+		printf("\ne o seu crescimento e de: ");
+		scanf("%f",&crescZe);
+				
+			if(altChico>altZe){
+				do{
+				anos++;
+				altChico=altChico+crescChico;
+				altZe=altZe+crescZe;				
+				}while(altZe<altChico || anos==100);
+				
+			}else{
+				do{
+				anos++;
+				altChico=altChico+crescChico;
+				altZe=altZe+crescZe;				
+				}while(altChico<altZe || anos==100);
+			}
+	
+			
+				if(anos>=100){
+						textcolor(10);
+					printf("\nImpossivel o mais baixo utrapassar o mais alto em 100 anos");
+				}else{
+						textcolor(11);
+				printf("\nO mais baixo utrapassara os mais alto em %d anos",anos);	
+				
+				}
+	
+	
+
+return 0;
+}
+
+
+
+----------------------------------------EX 3:sorteio----------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "conio2.h"
+
+
+int main() {
+    int qtd, numMaior=0, numPares = 0;
+    
+    printf("Digite a quantidade de 1 a 10 para serem sorteados: ");
+    scanf("%d", &qtd);
+    
+
+    for(int i = 0; i < qtd; i++) {
+        int numAleatorio = rand() % 11 ; 
+        printf("%d ", rand() % 11 ); 
+        
+     
+        if(numAleatorio > numMaior) {
+            numMaior = numAleatorio;
+        }
+   
+        if(numAleatorio % 2 == 0) {
+            numPares++;
+        }
+        
+        if(qtd <= 0){
+        	printf ("Valor invalido, fechando programa.");
+        	break;
+		}
+    }
+    
+    
+    
+    printf("\nQuantidade de numeros sorteados: %d\n", qtd);
+    printf("Maior numero sorteado: %d\n", numMaior+1);
+    printf("Quantidade de numeros pares sorteados: %d\n", numPares+1);
+    
+    return 0;
+}
+
+
+----------------------------------------EX 4:notaAlunos----------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "conio2.h"
+
+
+main(){
+	float nota, media, menorMedia = 99999999;
+	int qtd=1, maiorSete=0,cont;
+	
+	while(qtd!=0){
+		media = 0;
+		
+		printf("Digite a primeira nota: ");
+		scanf("%f",&nota);
+	
+	
+		if(nota!=0){
+		
+		media=media+nota;
+		
+		printf("\nDigite a segunda nota:",cont);
+		scanf("%f",&nota);
+		
+		if(nota!=0){
+		
+		media=media+nota;
+		
+		
+		printf("\n\n 1- continuar\n 0- encerrar\n");
+		scanf("%d",&qtd);
+		
+		
+		media=(nota+nota)/2;
+		
+		if(media>=7){
+			maiorSete++;	
+		}
+		
+		if(menorMedia>media){
+			menorMedia=media;
+		}
+		
+		
+			}
+		}
+		cont++;
+		
+		system("cls");
+		
+		
+	}
+	
+			 printf("O numero de alunos com a media maior ou igual a 7 foi: %d \n",maiorSete);
+			 printf("A menor media foi: %.2f\n",menorMedia);
+			 printf("A media da turma foi %.2f\n",media);
+			 printf("A quantidade de vezes que rodou foi %d",cont);
+		
+	return 0;
+}
