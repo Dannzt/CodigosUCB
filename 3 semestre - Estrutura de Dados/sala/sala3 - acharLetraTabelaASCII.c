@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
+/* eu conversei com o Yugi */
 main() {
 	setlocale(LC_ALL, "Portuguese");
 	int i, n;
