@@ -8,7 +8,7 @@ main() {
 	
 	
 	for(i=0;i<5;i++){
-		printf("Digite a sua idade [%d] =",i+1);
+		printf("Digite o [%d]° valor =",i+1);
 		scanf("%d",&vetor[i]);
 	}
 	
