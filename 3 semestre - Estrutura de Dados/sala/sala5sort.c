@@ -11,12 +11,12 @@ int main() {
 	for (i=0;i<10;i++)
 	printf ("%d\t", vet[i]);
 	
-	printf("\n\nQual é o valor que deseja buscar? ");
+	printf("\n\nQual Ã© o valor que deseja buscar? ");
 	scanf ("%d", &n);
 	
 	for(i=0;i<10;i++){
 		if(vet[i]==n){
-			printf("%d ocorre na posição %d do vetor. \n", n,i);
+			printf("%d ocorre na posiÃ§Ã£o %d do vetor. \n", n,i);
 			return 0;
 		}
 	}
